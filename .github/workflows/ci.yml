@@ -19,7 +19,5 @@ jobs:
         uses: ./
         with:
           github_token: ${{ secrets.github_token }}
-          skip_install: 'true'
-          use_bundler: 'true'
           reporter: github-pr-review
       - run: test "$(bundle exec rubocop --version)" == "1.18.1"
