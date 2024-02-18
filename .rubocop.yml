@@ -4,5 +4,3 @@ AllCops:
   Exclude:
     - 'test/rdjson_formatter/**/*'
     - 'vendor/**/*'
-Rails/RedundantActiveRecordAllMethod: # new in 2.21
-  Enabled: true
