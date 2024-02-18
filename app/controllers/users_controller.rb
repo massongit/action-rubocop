@@ -3,6 +3,6 @@
 # users
 class UsersController < ApplicationController
   def index
-    User.add.find_by(1)
+    User.all.find_by(1)
   end
 end
