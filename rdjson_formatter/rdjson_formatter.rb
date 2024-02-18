@@ -87,7 +87,8 @@ class RdjsonFormatter < RuboCop::Formatter::BaseFormatter
   # @return [Array{Hash}]
   def build_suggestions(offense)
     range, text = offense.corrector.as_replacements[0]
-    p range
+    p range.begin
+    p range.end
 
     [
       {
