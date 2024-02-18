@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 # users
 class UsersController < ActionController::Base
   def index
