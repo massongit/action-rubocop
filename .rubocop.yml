@@ -1,3 +1,5 @@
+require:
+  - rubocop-rails
 AllCops:
   Exclude:
     - 'test/rdjson_formatter/**/*'
