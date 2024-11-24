@@ -15,7 +15,7 @@ jobs:
           ruby-version: 3.3
           bundler-cache: true
       - name: rubocop with skip install and using bundler
-        uses: ./
+        uses: Bilka2/action-rubocop@reviewdog-fail-level
         with:
           github_token: ${{ secrets.github_token }}
           skip_install: 'true'
