@@ -1,4 +1,4 @@
-# GitHub Action: Run rubocop with reviewdog 🐶
+# GitHub Action: Run rubocop with reviewdog 🐶 test
 
 [![](https://img.shields.io/github/license/reviewdog/action-rubocop)](./LICENSE)
 [![depup](https://github.com/reviewdog/action-rubocop/workflows/depup/badge.svg)](https://github.com/reviewdog/action-rubocop/actions?query=workflow%3Adepup)
