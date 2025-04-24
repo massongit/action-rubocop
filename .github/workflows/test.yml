@@ -5,6 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
       - run: echo "CI_COMMIT=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
       - run: docker build -t test .
       - run: docker run --rm -t -e REVIEWDOG_GITHUB_API_TOKEN -e CI_REPO_OWNER -e CI_REPO_NAME -e CI_COMMIT test
