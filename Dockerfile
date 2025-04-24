@@ -6,6 +6,5 @@ RUN apt-get update \
     && apt-get remove -y ca-certificates curl \
     && rm -rf /var/lib/apt/lists
 COPY entrypoint.sh .
-COPY output_rdjson.json .
 
 ENTRYPOINT ["/entrypoint.sh"]
