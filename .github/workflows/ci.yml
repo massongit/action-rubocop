@@ -21,6 +21,10 @@ jobs:
           skip_install: 'true'
           use_bundler: 'true'
       - run: test "$(bundle exec rubocop --version)" == "1.65.0"
+      - uses: actions/upload-artifact@v4.6.2
+        with:
+          name: output_rdjson.json
+          path: output_rdjson.json
   test-only_changed:
     runs-on: ubuntu-latest
     defaults:
