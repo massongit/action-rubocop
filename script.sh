@@ -127,15 +127,7 @@ ${BUNDLE_EXEC}rubocop \
   --format RdjsonFormatter \
   --fail-level error \
   ${INPUT_RUBOCOP_FLAGS} \
-  "${CHANGED_FILES[@]}" \
-  | reviewdog -f=rdjson \
-      -name="${INPUT_TOOL_NAME}" \
-      -reporter="${INPUT_REPORTER}" \
-      -filter-mode="${INPUT_FILTER_MODE}" \
-      -fail-level="${INPUT_FAIL_LEVEL}" \
-      -fail-on-error="${INPUT_FAIL_ON_ERROR}" \
-      -level="${INPUT_LEVEL}" \
-      ${INPUT_REVIEWDOG_FLAGS}
+  "${CHANGED_FILES[@]}"
 
 reviewdog_rc=$?
 echo '::endgroup::'
