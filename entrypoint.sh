@@ -1,3 +1,6 @@
 #!/usr/bin/env bash
 
-cat ./output_rdjson.json  | reviewdog -f=rdjson -reporter=github-pr-review -level=warning -guess
+rubocop \
+  --require ./rdjson_formatter/rdjson_formatter.rb \
+  --format RdjsonFormatter \
+  --fail-level error  | reviewdog -f=rdjson -reporter=github-pr-review -level=warning -guess
